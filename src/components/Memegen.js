@@ -32,33 +32,18 @@ const Memegen = () => {
         <>
             <div className='container memecontainer pt-1 mt-1'>
             <h5 className='text-white'> Meme Generator </h5>
-                <div class="row text-white textclass m-1">
-                    <div class="col-3 mt-2">
+                <div className="row text-white textclass m-1">
+                    <div class="col-3 mt-1">
                         <label>Texto Superior</label>
                     </div>
-                    <input onChange={topTextSelect} className='form-control w-50 d-block mt-1 mb-1 text-white' type="text" id="fname" name="fname" arial-label='default input example'></input>
+                    <input onChange={topTextSelect} className='form-control w-50 d-block mt-1 text-white' type="text" id="fname" name="fname" arial-label='default input example'></input>
                 </div>
-                <div class="row text-white textclass m-1">
-                    <div class="col-3 mt-2">
+                <div className="row text-white textclass m-1">
+                    <div class="col-3 mt-1">
                         <label>Texto Inferior</label>
                     </div>
                     <input onChange={bottomTextSelect} className='form-control w-50 d-block mt-1 text-white' type="text" id="fname" name="fname" arial-label='default input example'></input>
                 </div>
-                {/*sss */}
-
-                <div class="row text-white textclass m-1">
-                    <div class="col-3 mt-1">
-                        <label>Tamaño</label>
-                    </div>
-                    <input className='w-50 d-block' type="range" min="0" max="70" value={textSize} onChange={textSizeSelect}></input>
-                </div>
-                <div class="row text-white textclass m-1">
-                    <div class="col-3 mt-1">
-                        <label>Color</label>
-                    </div>
-                    <input className='w-50 d-block' type="color" onChange={textColorSelect}></input>
-                </div>
-
                 <div class="row text-white textclass m-1">
                     <div class="col-3 mt-1">
                         <label>Fuente</label>
@@ -70,6 +55,18 @@ const Memegen = () => {
                         <option value={'Times'}> Times</option>
                         <option value={'Verdana'}> Verdana</option>
                     </select>
+                </div>
+                <div className="row text-white textclass m-1">
+                    <div className="col-3 mt-1">
+                        <label>Tamaño</label>
+                    </div>
+                    <input className='w-50 d-block' type="range" min="0" max="70" value={textSize} onChange={textSizeSelect}></input>
+                </div>
+                <div class="row text-white textclass m-1">
+                    <div class="col-3 mt-1">
+                        <label>Color</label>
+                    </div>
+                    <input className='w-50 d-block' type="color" onChange={textColorSelect}></input>
                 </div>
                 <div class="row text-white textclass m-1">
                     <div class="col-3 mt-1">
@@ -97,7 +94,6 @@ const Memegen = () => {
                         </figcaption>
                     </figure>
                 </div>
-                
                 <button onClick={exportar} type='button' className='btn btn-success btn-sm'> Generar meme </button>
             </div>
 
